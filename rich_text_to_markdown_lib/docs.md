@@ -1,18 +1,22 @@
 ### Explanation
 
-*   **constructor()**: Initializes the class with a set of default features.
+1.  **RichTextToMarkdown Class:**
     
-*   **addFeature(featureName)**: Adds a feature to the conversion process.
+    *   Manages plugins and converts rich text to Markdown using registered plugins.
+        
+2.  **Plugins:**
     
-*   **removeFeature(featureName)**: Removes a feature from the conversion process.
+    *   Each plugin is an object with a name and convert method.
+        
+    *   Plugins are defined in the same script, which makes it easy to understand and maintain.
+        
+3.  **Usage:**
     
-*   **convert(richText)**: Main method to convert rich text to Markdown based on enabled features.
-    
-*   **convertBold(text)**: Converts bold rich text (denoted by \*\*) to Markdown format.
-    
-*   **convertItalic(text)**: Converts italic rich text (denoted by \*) to Markdown format.
-    
-*   **convertHeading(text)**: Converts heading syntax to Markdown format.
-    
+    *   Create an instance of RichTextToMarkdown.
+        
+    *   Register the plugins you want to use.
+        
+    *   Convert rich text to Markdown and log the result.
+        
 
-You can extend this class by adding more methods to handle different rich text features and corresponding Markdown syntax.
+By including all the code in a single HTML file, you avoid using modern JavaScript module features and ensure compatibility with older browsers.
